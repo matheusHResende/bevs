@@ -1,9 +1,14 @@
+# IDE folders
 .vs
-Debug
 .vscode
+
+# Visual studio files and folders
 *.sln
 *.vcxproj
 *.vcxproj.filters
 *.vcxproj.user
+Debug
+
+# Object files generated from compilation
 obj
 BEVSoft.o
