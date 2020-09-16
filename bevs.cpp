@@ -3,6 +3,8 @@
 #include "./src/Graph.h"
 #include "./src/Vertex.h"
 
+// Building Data Structures
+
 int main(){
     Vertex* vertex = new Vertex("0 5");
     Vertex* vertex2 = new Vertex(0, 1);
