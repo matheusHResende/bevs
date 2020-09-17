@@ -18,5 +18,18 @@ public:
     ~Graph(); //Buiild a file
 
     void addVertex(const Vertex &vertex);
-    void addEdge(const Vertex &A, const Vertex &B);
+    void addEdge(Vertex &A, Vertex &B);
+    void removeVertex(const Vertex &vertex);
+    void removeEdge(const Vertex &A, const Vertex &B);
+
+    vector<Vertex> getNeighborhood(const Vertex &vertex);
+    vector<Vertex> getVertices();
+
+    double getDistance(const Vertex &A, const Vertex &B);
+    
+    bool isNeighbor(const Vertex &A, const Vertex &B);
+    bool hasVertex(const Vertex &vertex);
+    bool hasEdge(const Vertex &A, const Vertex &B);
+
+    
 };

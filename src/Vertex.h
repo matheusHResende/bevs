@@ -21,5 +21,7 @@ public:
     double getY();
 
     double getDistanceTo(Vertex& vertex);
+
+    bool equals(const Vertex &vertex);
 };
 

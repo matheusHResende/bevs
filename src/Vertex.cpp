@@ -41,3 +41,7 @@ double Vertex::getDistanceTo(Vertex& vertex){
 
 Vertex::~Vertex(){
 }
+
+bool Vertex::equals(const Vertex &vertex){
+    return (this->coordinates.first == vertex.coordinates.first) and (this->coordinates.second == vertex.coordinates.second);
+}
