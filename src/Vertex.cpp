@@ -1,6 +1,5 @@
 #include "Vertex.h"
 #include <cstdlib>
-#include <iostream>
 #include <cmath>
 
 Vertex::Vertex(const Vertex& vertex){
@@ -41,5 +40,4 @@ double Vertex::getDistanceTo(Vertex& vertex){
 }
 
 Vertex::~Vertex(){
-    cout << " morri" << endl;
 }

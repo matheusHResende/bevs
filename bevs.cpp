@@ -10,4 +10,5 @@ int main(){
     Vertex* vertex2 = new Vertex(0, 1);
     cout << "Dist: " << vertex->getDistanceTo(*vertex2) << endl;
     system("pause");
+    return 0;
 }
