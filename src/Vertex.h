@@ -28,5 +28,3 @@ public:
 
     long unsigned int getId();
 };
-
-

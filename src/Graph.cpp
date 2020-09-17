@@ -1,28 +1,28 @@
 #include "Graph.h"
 #include <fstream>
 
-// Graph::Graph(){
+Graph::Graph(){
 
-// }
+}
 
-// Graph::Graph(const string &file){
+Graph::Graph(const string &file){
 
-// }
+}
 
-// Graph::Graph(const Graph &graph){
-//     this->vertices = vector<Vertex>(graph.vertices);
-//     this->graph = map<Vertex, map<Vertex, double>>(graph.graph);
-// }
+Graph::Graph(const Graph &graph){
+    this->vertices = vector<Vertex>(graph.vertices);
+    this->graph = map<Vertex, map<Vertex, double>>(graph.graph);
+}
 
-// void Graph::addVertex(const Vertex &vertex){
-//     if (!this->hasVertex(vertex)){
-//         this->vertices.push_back(vertex);
-//     }
-//     else{
-//         //Throw exception;
-//     }
+void Graph::addVertex(const Vertex &vertex){
+    if (!this->hasVertex(vertex)){
+        this->vertices.push_back(vertex);
+    }
+    else{
+        //Throw exception;
+    }
     
-// }
+}
 
 // void Graph::addEdge(Vertex &A, Vertex &B){
 //     this->addVertex(A);
@@ -73,14 +73,14 @@
 //     return this->hasEdge(A,B);
 // }
 
-// bool Graph::hasVertex(const Vertex &vertex){
-//     for (unsigned int i = 0; i < this->vertices.size(); i++){
-//         if (this->vertices.at(i).equals(vertex)){        
-//             return true;
-//         }
-//     }
-//     return false;
-// }
+bool Graph::hasVertex(const Vertex &vertex){
+    for (unsigned int i = 0; i < this->vertices.size(); i++){
+        if (this->vertices.at(i).equals(vertex)){        
+            return true;
+        }
+    }
+    return false;
+}
 
 // bool Graph::hasEdge(const Vertex &A, const Vertex &B){
 //     try{
