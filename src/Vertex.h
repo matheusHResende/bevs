@@ -7,6 +7,8 @@ using namespace std;
 
 class Vertex {
 private:
+    static long unsigned int actualId;
+    long unsigned int id;
     pair<double, double> coordinates;
 public:
     Vertex(const Vertex& vertice);
@@ -23,5 +25,8 @@ public:
     double getDistanceTo(Vertex& vertex);
 
     bool equals(const Vertex &vertex);
+
+    long unsigned int getId();
 };
+
 

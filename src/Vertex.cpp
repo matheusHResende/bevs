@@ -2,8 +2,12 @@
 #include <cstdlib>
 #include <cmath>
 
+long unsigned int Vertex::actualId = 0;
+
 Vertex::Vertex(const Vertex& vertex){
     this->coordinates = vertex.coordinates;
+    this->actualId++;
+    this->id = actualId;
 }
 
 Vertex::Vertex(const string& coordinates){
@@ -13,14 +17,20 @@ Vertex::Vertex(const string& coordinates){
     Y = coordinates.substr(space+1, coordinates.size());
 
     this->coordinates = pair<double, double>(stod(X), stod(Y));
+    this->actualId++;
+    this->id = actualId;
 }
 
 Vertex::Vertex(const pair<double, double>& coordinates) {
     this->coordinates = pair<double, double>(coordinates);
+    this->actualId++;
+    this->id = actualId;
 }
 
 Vertex::Vertex(double X, double Y) {
     this->coordinates = pair<double, double>(X, Y);
+    this->actualId++;
+    this->id = actualId;
 }
 
 pair<double, double> Vertex::getCoordinates(){
@@ -43,5 +53,9 @@ Vertex::~Vertex(){
 }
 
 bool Vertex::equals(const Vertex &vertex){
-    return (this->coordinates.first == vertex.coordinates.first) and (this->coordinates.second == vertex.coordinates.second);
+    return (this->coordinates.first == vertex.coordinates.first) && (this->coordinates.second == vertex.coordinates.second);
+}
+
+long unsigned int Vertex::getId(){
+    return this->id;
 }
