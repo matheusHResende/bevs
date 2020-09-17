@@ -8,9 +8,10 @@ using namespace std;
 class Vertex {
 private:
     static long unsigned int actualId;
-    long unsigned int id;
     pair<double, double> coordinates;
 public:
+    long unsigned int id;
+
     Vertex(const Vertex& vertice);
     Vertex(const string& coordinates);
     Vertex(const pair<double, double>& coordinates);
@@ -25,6 +26,10 @@ public:
     double getDistanceTo(Vertex& vertex);
 
     bool equals(const Vertex &vertex);
+
+    bool operator <(const Vertex& vertex) const{
+        return this->id < vertex.id;
+    }
 
     long unsigned int getId();
 };

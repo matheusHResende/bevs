@@ -59,7 +59,3 @@ bool Vertex::equals(const Vertex &vertex){
 long unsigned int Vertex::getId(){
     return this->id;
 }
-
-bool operator<(Vertex &A, Vertex &B){
-    return A.getId() < B.getId();
-}
